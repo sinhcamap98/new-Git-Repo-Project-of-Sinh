@@ -1,0 +1,24 @@
+var ETADays = vvdGr.u_parent_vvd.u_service_lane_code.eta_days;	
+					// convert float to number
+					var ETADaysInteger = Math.floor(ETADays);
+					gs.info('sinh ETADaysInteger: ' + ETADaysInteger);
+					
+					
+					var currentTime = new GlideDateTime().getDate();
+					
+                    var dayAfter = currentTime.addDaysUTC(ETADaysInteger);
+					gs.info('sinh dayAfter: ' + dayAfter);
+					
+					var dayBefore = currentTime.addDaysUTC(-ETADaysInteger);
+                    gs.info('sinh dayBefore: ' + dayBefore);
+					
+					var etaEst = new GlideDateTime(vvdGr.arrival_date).getDate();
+					gs.info('sinh etaEst: ' + etaEst);
+					
+					if(dayBefore <= etaEst <= dayAfter){
+						// firm booking
+					}else{
+						// forecast
+					}
+
+					

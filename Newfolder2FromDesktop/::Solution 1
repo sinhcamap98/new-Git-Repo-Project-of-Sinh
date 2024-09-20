@@ -1,0 +1,20 @@
+					//Solution 1
+					/*for (var a = 0; a < FINAL_ROUTE_INFO.length ; a++){
+						var serviceLanePortGr = new GlideRecord('x_one_deloitte_app_service_lane_port');
+						serviceLanePortGr.addQuery('u_service_lane.sys_id', currentServiceLaneId);
+						serviceLanePortGr.addQuery('u_port.u_code', FINAL_ROUTE_INFO[a].portCode);
+						serviceLanePortGr.addQuery('u_bound', FINAL_ROUTE_INFO[a].bound);
+						serviceLanePortGr.query();
+						if(serviceLanePortGr.next()){
+							FINAL_ROUTE_INFO[a].discharge_only = serviceLanePortGr.u_discharge_only.toString();
+						}
+					}
+
+
+					var filterDischargeOnlyArr = FINAL_ROUTE_INFO.filter(function(arrItem){
+						return arrItem.discharge_only == 'false';
+					});
+
+					// set FINAL_ROUTE_INFO = 	filterDischargeOnlyArr
+					FINAL_ROUTE_INFO = 	filterDischargeOnlyArr;
+					*/
