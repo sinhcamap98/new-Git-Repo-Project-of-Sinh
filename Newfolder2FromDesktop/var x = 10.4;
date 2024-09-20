@@ -1,0 +1,37 @@
+var x = 10.4;
+var z = Math.floor(x);
+gs.info('test: ' + z + 'typeOf: ' + typeof(z));
+
+var currentTime = new GlideDateTime().getDate();	
+currentTime.addDaysUTC(-3);
+gs.info(currentTime);
+
+var currentTime = new GlideDateTime().getDate();
+gs.info('get day: ' + currentTime);
+gs.info('convert day to number: '+ currentTime.getNumericValue());
+
+
+if( 1<=6 && 6<=3 ){
+ gs.info('return true');
+}else{
+ gs.info('return false');
+}
+
+
+var etaDayInput = 2;
+var currentTime = new GlideDateTime().getDate();
+gs.info('current time: ' + currentTime);
+gs.info('current time have converted to number: ' + currentTime.getNumericValue());
+
+var dayBefore = new GlideDateTime().getDate();
+dayBefore.addDaysUTC(-etaDayInput);
+gs.info('day before: ' + dayBefore);
+gs.info('day Before have converted to number: ' + dayBefore.getNumericValue());
+
+var dayAfter = new GlideDateTime().getDate();
+dayAfter.addDaysUTC(etaDayInput)
+gs.info('day After: ' + dayAfter);
+gs.info('day After have converted to number: ' + dayAfter.getNumericValue());
+
+
+
